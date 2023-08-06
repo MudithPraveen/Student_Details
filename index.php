@@ -15,7 +15,7 @@
         <label for="">Last Name</label>
         <input type="text" name="lname"><br>
         <label for="">Year</label>
-        <input type="year" name="year"><br>
+        <input type="text" name="year"><br>
         <input type="submit" name="submit">
     </form>
 </body>

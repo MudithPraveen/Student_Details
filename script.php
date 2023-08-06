@@ -1,9 +1,13 @@
 <?php
 if(isset($_POST["submit"])){
-    $id=$_POST["id"];
-    $fname=$_POST["fname"];
-    $lname=$_POST["lname"];
-    $year=$_POST["year"];
+    include "./class/DBClass.php";
+    $db = new DBClass();
+    $conn = $db->connect();
+
+    $id=mysqli_real_escape_string($conn,$_POST["id"]);
+    $fname=mysqli_real_escape_string($conn,$_POST["fname"]);
+    $lname=mysqli_real_escape_string($conn,$_POST["lname"]);
+    $year=mysqli_real_escape_string($conn,$_POST["year"]);
 
     include "./class/classes.php";
     $send = new InputData();
