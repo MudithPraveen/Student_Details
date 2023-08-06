@@ -1,16 +1,13 @@
 <?php
-
 class InputData{
-    private $id;
-    private $fname;
-    private $lname;
-    private $year;
 
-    public function __construct($id,$fname,$lname,$year)
+    public function saveData($id,$fname,$lname,$year)
     {
-        $this->$id=$id;
-        $this->$fname=$fname;
-        $this->$lname=$lname;
-        $this->$year=$year;
+        include "./class/DBClass.php";
+        $db = new DBClass();
+        $conn = $db->connect();
+
+        $sql="INSERT INTO student VALUES('$id','$fname','$lname','$year');";
+        mysqli_query($conn,$sql);
     }
 }

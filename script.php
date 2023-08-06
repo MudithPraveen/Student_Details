@@ -5,6 +5,9 @@ if(isset($_POST["submit"])){
     $lname=$_POST["lname"];
     $year=$_POST["year"];
 
-    include "./classes.php";
-    $send = new InputData($id,$fname,$lname,$year);
+    include "./class/classes.php";
+    $send = new InputData();
+    $send->saveData($id,$fname,$lname,$year);
+
+    header('location:./index.php');
 }
