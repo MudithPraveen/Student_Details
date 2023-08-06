@@ -18,14 +18,5 @@
         <input type="year" name="year"><br>
         <input type="submit" name="submit">
     </form>
-
-    <table>
-        <tr>
-            <th>Student ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Year</th>
-        </tr>
-    </table>
 </body>
 </html>
